@@ -1,0 +1,7 @@
+<form class="pb-1" *ngIf="inputType === InputType.SINGLE">
+  <input class="form-control pb-1" type="number" #singlePort [formControl]="singlePortFormCtrl" placeholder="Enter Port">
+</form>
+<form class="pb-1" *ngIf="inputType === InputType.MULTI">
+  <input class="form-control" type="text" #multiPorts [formControl]="multiPortsFormCtrl" placeholder="Enter multiple ports">
+  <span class="small text-muted">Enter comma separated values</span>
+</form>

@@ -1,0 +1,20 @@
+<div class="p-2">
+  <ports-input-component [(ngModel)]="portValue"></ports-input-component>
+  <div>Single Value Support: {{ portValue | json }}</div>
+</div>
+
+<div class="p-2">
+  <ports-input-component [inputType]="InputType.MULTI" [(ngModel)]="multiPortValue"></ports-input-component>
+  <div>Multi value Support: {{ multiPortValue | json }}</div>
+</div>
+
+<div class="p-2">
+  <ports-input-component [inputType]="InputType.SINGLE" [formControl]="singleFormControl"></ports-input-component>
+  <div>Single Form Control Example: {{ singleFormControl.value | json }} {{ 'isValid=' + singleFormControl.valid }}</div>
+</div>
+
+<div class="p-2">
+  <ports-input-component [inputType]="InputType.MULTI" [formControl]="multiFormControl"></ports-input-component>
+  <div>Multi Form Control Example: {{ multiFormControl.value | json }} {{ 'isValid=' + multiFormControl.valid }} {{
+    'Errors=' + (multiFormControl.errors | json) }}</div>
+</div>
